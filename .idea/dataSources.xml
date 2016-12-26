@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="simple_cms_development@localhost" uuid="4fd03560-d4af-4444-99ee-e71b9a3499a8">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/simple_cms_development</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="simple_cms_test@localhost" uuid="2761ccc9-8d52-4d36-8e2e-a24f54ce0f3e">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/simple_cms_test</jdbc-url>
+    </data-source>
+  </component>
+</project>
