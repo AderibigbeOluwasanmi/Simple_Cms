@@ -10,4 +10,9 @@
 
 <br/>
 
-<%= link_to('Hello page 2', {:action => 'index'}) %> <br/>
+<%= link_to('Index page ', {:action => 'index'}) %> <br/>
+<br/>
+ID: <%= @id %>
+Page: <%= @page %>
+<br/>
+Next Page: <%= @page.to_i + 1 %>
