@@ -22,15 +22,26 @@ class PagesController < ApplicationController
   end
 
   def delete
+    @page = Page.find(params[:id])
   end
 
   def destroy
+    @page = Page.find(params[:id])
+    @page.destroy
+    redirect_to(pages_path)
   end
 
   def update
+    @page = Page.find(params[:id])
+    if @page.update_attributes(page_params)
+      redirect_to(pages_path)
+    else
+      render('edit')
+    end
   end
 
   def edit
+    @page = Page.find(params[:id])
   end
 
   private

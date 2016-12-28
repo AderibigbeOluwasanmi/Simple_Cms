@@ -19,8 +19,8 @@
           <td class="center"><%= page.visible ? 'Yes' : 'No' %></td>
           <td class="actions">
             <%= link_to('Show', page_path(page), :class => 'action show') %>
-            <%= link_to('Edit', '#', :class => 'action edit') %>
-            <%= link_to('Delete', '#', :class => 'action delete') %>
+            <%= link_to('Edit', edit_page_path(page), :class => 'action edit') %>
+            <%= link_to('Delete', delete_page_path(page), :class => 'action delete') %>
           </td>
         </tr>
     <% end %>
