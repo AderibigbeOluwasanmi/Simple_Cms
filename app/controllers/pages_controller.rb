@@ -11,6 +11,7 @@ class PagesController < ApplicationController
     @page = Page.new(page_params)
     #checks if page was successfully saved to the database.
     if @page.save
+      flash[:notice] = 'Page created successfully'
       redirect_to(pages_path)
     else
       render('new')
@@ -28,12 +29,14 @@ class PagesController < ApplicationController
   def destroy
     @page = Page.find(params[:id])
     @page.destroy
+    flash[:notice] = 'Page destroyed successfully'
     redirect_to(pages_path)
   end
 
   def update
     @page = Page.find(params[:id])
     if @page.update_attributes(page_params)
+      flash[:notice] = 'Page updated successfully'
       redirect_to(pages_path)
     else
       render('edit')
