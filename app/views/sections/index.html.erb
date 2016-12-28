@@ -5,22 +5,22 @@
 
   <table class="listing" summary="Page list">
     <tr class="header">
-      <th>Position</th>
-      <th>permalink</th>
       <th>Name</th>
+      <th>Content</th>
+      <th>Position</th>
       <th>Visible</th>
       <th>Actions</th>
     </tr>
     <% @sections.each do |section| %>
         <tr>
           <td class="center"><%= section.name %></td>
-          <td><%= section.permalink %></td>
+          <td><%= section.content %></td>
           <td><%= section.position %></td>
-          <td class="center"><%= page.visible ? 'Yes' : 'No' %></td>
+          <td class="center"><%= section.visible ? 'Yes' : 'No' %></td>
           <td class="actions">
-            <%= link_to('Show', section_path(page), :class => 'action show') %>
-            <%= link_to('Edit', section_page_path(page), :class => 'action edit') %>
-            <%= link_to('Delete', delete_page_path(page), :class => 'action delete') %>
+            <%= link_to('Show', section_path(section), :class => 'action show') %>
+            <%= link_to('Edit', edit_section_path(section), :class => 'action edit') %>
+            <%= link_to('Delete', delete_section_path(section), :class => 'action delete') %>
           </td>
         </tr>
     <% end %>
